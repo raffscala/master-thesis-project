@@ -27,7 +27,7 @@ for i in range(len(kind)):
   
     c = next(color)
    
-    path_pisn=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popIII/{kind[i][j]}/input_bin_pisn/output_cosmo_Rate/bin_PISN/MRD_spread_1Z_100_No_linear_0.2_No_No_False_asloth_smooth_off_1.dat"
+    path_pisn=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popIII/{kind[i][j]}/input_bin_pisn/output_cosmo_Rate/bin_PISN/MRD_spread_1Z_100_No_linear_0.2_No_No_False_asloth_smooth_off_1.dat"    #CHANGE FOR THE CORRECT PATHS
     path_ppisn=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popIII/{kind[i][j]}/input_bin_ppisn/output_cosmo_Rate/bin_PPISN/MRD_spread_1Z_100_No_linear_0.2_No_No_False_asloth_smooth_off_1.dat"
   
     pisn=pd.read_csv(path_pisn,skiprows=1,header=None,sep=' ')
