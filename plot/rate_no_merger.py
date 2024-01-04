@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 plt.rcParams.update({'font.size':17})
-pisn=pd.read_excel("/home/scala/tesi/analisi_dati_sevn/tabelle_output/tabelle_sevn_10^6/PISN_binary_10^6.xlsx",dtype=float)
+pisn=pd.read_excel("/home/scala/tesi/analisi_dati_sevn/tabelle_output/tabelle_sevn_10^6/PISN_binary_10^6.xlsx",dtype=float)    #choose the correct path where the data are stored
 ppisn=pd.read_excel("/home/scala/tesi/analisi_dati_sevn/tabelle_output/tabelle_sevn_10^6/PPISN_binary_10^6.xlsx",dtype=float)
 
 a,=plt.plot(pisn['Z'],pisn['PISN_before_merger_rate'],'-o',color='blue',markersize=3,linewidth=1)
