@@ -3,7 +3,7 @@ import pandas as pd
 from matplotlib.pyplot import cm
 import matplotlib.pyplot as plt
 
-
+#All the models adopted for pop3 stars
 kind1=['LAR1','LAR5']
 kind2=['KRO1','KRO5']
 kind3=['TOP1','TOP5']
@@ -28,7 +28,8 @@ for i in range(len(kind)):
   for j in range(len(kind[i])):
   
     c = next(color)
-   
+    
+    #CHANGE FOR THE CORRECT PATHS
     path_pisn_aft=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popIII/{kind[i][j]}/input_bin_pisn_after/output_cosmo_Rate/bin_PISNafter/MRD_spread_1Z_100_No_linear_0.2_No_No_False_asloth_smooth_off_1.dat"
     path_pisn_bef=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popIII/{kind[i][j]}/input_bin_pisn_before/output_cosmo_Rate/bin_PISNbefore/MRD_spread_1Z_100_No_linear_0.2_No_No_False_asloth_smooth_off_1.dat"
     path_ppisn_aft=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popIII/{kind[i][j]}/input_bin_ppisn_after/output_cosmo_Rate/bin_PPISNafter/MRD_spread_1Z_100_No_linear_0.2_No_No_False_asloth_smooth_off_1.dat"
