@@ -24,22 +24,13 @@ def merge_rate_unc(merger_rate, quant_low, quant_up):
 
 plt.rcParams.update({'font.size':15})
 
-#cb_class=['sing_pisn','bin_pisn','sing_ppisn','bin_ppisn']
-#sim=['sing_PISN','bin_PISN','sing_PPISN','bin_PPISN']
-#sing='MRD_spread_9Z_50_No_linear_0.2_Yes_Yes_False_MandF2017_1.dat'
-#bin='MRD_spread_16Z_50_No_linear_0.2_Yes_Yes_False_MandF2017_1.dat'
-#singpp='MRD_spread_16Z_50_No_linear_0.2_Yes_Yes_False_MandF2017_1.dat'
-#binpp='MRD_spread_16Z_50_No_linear_0.2_Yes_Yes_False_MandF2017_1.dat'
-#syst=[sing,bin,singpp,binpp]
-
 cb_class=['bin_pisn_after','bin_pisn_before','bin_ppisn_after','bin_ppisn_before']
 sim=['bin_PISNafter','bin_PISNbefore','bin_PPISNafter','bin_PPISNbefore']
-pisn_after='MRD_spread_16Z_50_No_linear_0.2_Yes_Yes_False_MandF2017_1.dat'
+pisn_after='MRD_spread_16Z_50_No_linear_0.2_Yes_Yes_False_MandF2017_1.dat'        #CHANGE FOR THE CORRECT FILE NAMES
 pisn_before='MRD_spread_13Z_50_No_linear_0.2_Yes_Yes_False_MandF2017_1.dat'
 ppisn_after='MRD_spread_16Z_50_No_linear_0.2_Yes_Yes_False_MandF2017_1.dat'
 ppisn_before='MRD_spread_16Z_50_No_linear_0.2_Yes_Yes_False_MandF2017_1.dat'
 syst=[pisn_after,pisn_before,ppisn_after,ppisn_before]
-
 
 CI = '95'
 if CI == '95':
@@ -49,13 +40,14 @@ elif CI == '50':
   min_ci = 25
   max_ci  = 75
 
-
 N_iter=1000
 
-path0=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popI_II/A3/10^6/input_{cb_class[0]}/output_cosmo_Rate/{sim[0]}/"
+path0=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popI_II/A3/10^6/input_{cb_class[0]}/output_cosmo_Rate/{sim[0]}/"        #CHANGE FOR THE CORRECT PATHS
 path1=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popI_II/A3/10^6/input_{cb_class[1]}/output_cosmo_Rate/{sim[1]}/"
 path2=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popI_II/A3/10^6/input_{cb_class[2]}/output_cosmo_Rate/{sim[2]}/"
 path3=f"/home/scala/tesi/cosmo_rate_public-v2/astromodel/popI_II/A3/10^6/input_{cb_class[3]}/output_cosmo_Rate/{sim[3]}/"
+
+#Here each dataset for each kind of event is loaded 
 
 z_binz0= np.loadtxt(path0+syst[0], usecols = 0)           
 MRD_binz0= np.loadtxt(path0+syst[0], usecols = np.arange(1,N_iter))
@@ -79,6 +71,7 @@ MR_50_3,MR_low_3,MR_up_3=merge_rate_unc(MRD_binz3, min_ci, max_ci)
 
 fig = plt.figure()
 
+#Create four subplots
 
 ax2 = fig.add_axes([0.1, 0.1, 0.4, 0.4])
 ax1=fig.add_axes([0.1, 0.5, 0.4, 0.4])
