@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib.pyplot import cm
 import matplotlib.pyplot as plt
 
-
+#All the models adopted for pop3 stars
 kind1=['LAR1','LAR5']
 kind2=['KRO1','KRO5']
 kind3=['TOP1','TOP5']
@@ -13,6 +13,7 @@ kind=[kind1,kind2,kind3,kind4,kind5]
 
 plt.rcParams.update({'font.size':20})
 
+#Create two subplots
 fig = plt.figure()
 ax1 = fig.add_axes([0.1, 0.1, 0.8, 0.4])
 ax2 = fig.add_axes([0.1, 0.5, 0.8, 0.4])
