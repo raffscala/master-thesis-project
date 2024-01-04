@@ -6,7 +6,7 @@ plt.rcParams.update({'font.size':25})
 sing=pd.read_excel("/home/scala/tesi/analisi_dati_sevn/tabelle_output/tabelle_sevn_10^6/single_rates_10^6.xlsx",dtype=float) #choose the correct path where the data are stored
 bin=pd.read_excel("/home/scala/tesi/analisi_dati_sevn/tabelle_output/tabelle_sevn_10^6/binary_rates_10^6.xlsx",dtype=float)
 
-
+#Plots for PISN and PPISN rates
 fig = plt.figure()
 ax2 = fig.add_axes([0.1, 0.15, 0.8, 0.4])
 ax1 = fig.add_axes([0.1, 0.55, 0.8, 0.4])
