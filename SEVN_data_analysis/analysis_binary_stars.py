@@ -125,7 +125,7 @@ for i in range(len(Z)):
   N_merger_aft_ppisn=len(dfmerger_after_ppisn)  #number of ppisn occurred before merger
   N_merger_bef_ppisn=len(dfmerger_before_ppisn)  #number of ppisn occurred after merger
   N_doubleppisn=len(df_doubleppisn)/int(2)  #number of systems in which we have double ppisn
-  N_doubleppisn_e_merger=len(dfdouble_e_merging)/int(2)  #number of systems in which we have double ppisn and also merger ì
+  N_doubleppisn_e_merger=len(dfdouble_e_merging)/int(2)  #number of systems in which we have double ppisn and also merger Ã¬
   
   N_CCSN = len(dfSN.loc[dfSN["SN_type"]=='2'])
  
